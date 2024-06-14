@@ -31,10 +31,18 @@
         <table>
             <thead>
                 <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
-                    <th>Column 4</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                     <!-- Add more columns as needed -->
                 </tr>
             </thead>
@@ -45,6 +53,14 @@
                         <td>{{ $data->column2 }}</td>
                         <td>{{ $data->column3 }}</td>
                         <td>{{ $data->column4 }}</td>
+                        <td>{{ $data->column5 }}</td>
+                        <td>{{ $data->column6 }}</td>
+                        <td>{{ $data->column7 }}</td>
+                        <td>{{ $data->column8 }}</td>
+                        <td>{{ $data->column9 }}</td>
+                        <td>{{ $data->column10 }}</td>
+                        <td>{{ $data->column11 }}</td>
+                        <td>{{ $data->column12}}</td>
                         <!-- Add more columns as needed -->
                     </tr>
                 @endforeach

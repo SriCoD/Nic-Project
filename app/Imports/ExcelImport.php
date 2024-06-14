@@ -19,30 +19,48 @@
 //         ]);
 //     }
 // }
-namespace App\Http\Controllers;
+// namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\ExcelImport;
+// use Illuminate\Http\Request;
+// use Maatwebsite\Excel\Facades\Excel;
+// use App\Imports\ExcelImport;
 
-class ExcelController extends Controller
+// class ExcelController extends Controller
+// {
+//     public function showUploadForm()
+//     {
+//         return view('upload');
+//     }
+
+//     public function uploadFile(Request $request)
+//     {
+//         $request->validate([
+//             'excel_file' => 'required|mimes:xlsx',
+//         ]);
+
+//         $path = $request->file('excel_file')->store('temp');
+//         $file = storage_path('app/' . $path);
+
+//         $data = Excel::toArray(new ExcelImport, $file);
+
+//         return view('preview', ['data' => $data[0]]);
+//     }
+// }
+
+
+namespace App\Imports;
+
+use App\Models\ExcelDataTable;
+use Maatwebsite\Excel\Concerns\ToModel;
+
+class ExcelImport implements ToModel
 {
-    public function showUploadForm()
+    public function model(array $row)
     {
-        return view('upload');
-    }
-
-    public function uploadFile(Request $request)
-    {
-        $request->validate([
-            'excel_file' => 'required|mimes:xlsx',
+        return new ExcelDataTable([
+            'column1' => $row[0]
+            //'column2' => $row[1]
+            // Map additional columns as needed
         ]);
-
-        $path = $request->file('excel_file')->store('temp');
-        $file = storage_path('app/' . $path);
-
-        $data = Excel::toArray(new ExcelImport, $file);
-
-        return view('preview', ['data' => $data[0]]);
     }
 }

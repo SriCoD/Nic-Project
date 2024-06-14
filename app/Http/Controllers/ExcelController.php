@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
     use Illuminate\Http\Request;
     use Maatwebsite\Excel\Facades\Excel;
     use App\Imports\ExcelImport;
-    use App\Models\ExcelData;
+    use App\Models\ExcelDataTable;
     
     class ExcelController extends Controller
     {
@@ -24,8 +24,12 @@ namespace App\Http\Controllers;
      $path = $request->file('excel_file')->store('temp');
      $file = storage_path('app/' . $path);
 
-     $data = Excel::toArray(new ExcelImport, $file);
+     //$data = Excel::toArray(new ExcelImport, $file);
 
-     return view('preview', ['data' => $data[0]]);
+     //return view('preview', ['data' => $data[0]]);
+
+     Excel::import(new ExcelImport, $file);
+
+     return redirect()->route('upload.file')->with('success', 'Excel data imported successfully');
  }
     }

@@ -11,20 +11,19 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Link</a>
+          
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Link</a>
+              <a class="nav-link" href="https://www.linkedin.com/in/srishti-jha-4808481ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Link</a>
+                <a class="nav-link" href="https://github.com/SriCoD" target="_blank">Github</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -37,7 +36,7 @@
         @yield('content')
     </div>
     <div class="mt-5 p-4 bg-dark text-white text-center">
-        <p>Footer</p>
+        <p>@Srishti</p>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('toast/js/toastr.min.js')}}"></script>

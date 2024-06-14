@@ -15,12 +15,13 @@ class AuthCheck
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!Session()->has('loginID')){
-            return redirect()->route('login')->with('fail','You must login to access this page.');
+        if (!Session()->has('loginID')) {
+            return redirect()->route('login')->with('fail', 'You must login to access this page.');
         }
-        return $next($request)->header('Cashe-Control','no-cashe, no-store, max-age=0, must-revalidate')
-                              ->header('Pragma','no-cashe')
-                              ->header('Expires','Sat 01 Jan 1990 00:00:00 GMT');
+
+        return $next($request)
+            ->header('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate')
+            ->header('Pragma', 'no-cache')
+            ->header('Expires', 'Sat, 01 Jan 1990 00:00:00 GMT');
     }
-    
 }

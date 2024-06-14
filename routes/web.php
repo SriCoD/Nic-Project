@@ -45,13 +45,20 @@ Route::group(['middleware' => ['AuthLogin']], function () {
     Route::post('/userRegister', [AuthController::class, 'registerAuth'])->name('userRegister')->middleware('AuthLogin');
 });
 
+// Route::group(['middleware' => ['AuthCheck']], function () {
+// Route::get('/', [AuthController::class, 'home'])->name('home');
+   
+// Route::get('/upload', [ExcelController::class, 'showUploadForm'])->name('upload.form');
+// Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
+// Route::get('/dashboard', [ExcelController::class, 'showDashboard'])->name('dashboard');  
+//     // Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
+// });
+
 Route::group(['middleware' => ['AuthCheck']], function () {
     Route::get('/', [AuthController::class, 'home'])->name('home');
-   
-Route::get('/upload', [ExcelController::class, 'showUploadForm'])->name('upload.form');
-Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
-   
-    // Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
+    Route::get('/upload', [ExcelController::class, 'showUploadForm'])->name('upload.form');
+    Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
+    Route::get('/dashboard', [ExcelController::class, 'showDashboard'])->name('dashboard');
 });
 
 Route::get('/test-db-connection', function () {

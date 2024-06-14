@@ -37,6 +37,9 @@ class CreateExcelDataTablesTable extends Migration
         Schema::create('excel_data_tables', function (Blueprint $table) {
             $table->id();
             $table->string('column1');
+            $table->string('column2');
+            $table->string('column3');
+            $table->string('column4');
             // Add more columns as needed
             $table->timestamps();
         });

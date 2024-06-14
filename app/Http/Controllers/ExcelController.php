@@ -30,6 +30,14 @@ namespace App\Http\Controllers;
 
      Excel::import(new ExcelImport, $file);
 
-     return redirect()->route('upload.file')->with('success', 'Excel data imported successfully');
- }
+     //return redirect()->route('upload.form')->with('success', 'Excel data imported successfully');
+     return redirect()->route('dashboard')->with('success', 'Excel data imported successfully');
+
+ 
+    }
+    public function showDashboard()
+    {
+        $importedData = ExcelDataTable::all();
+        return view('dashboard', compact('importedData'));
+    }
     }

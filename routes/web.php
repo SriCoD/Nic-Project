@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ExcelController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,46 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// Route::group(['middleware'=>['AuthLogin']], function () {
+//     Route::get('/login',[AuthController::class, 'login'])->name('login')->middleware('AuthLogin');
+//     Route::post('/userLogin',[AuthController::class, 'loginAuth'])->name('userLogin')->middleware('AuthLogin');
+//     Route::get('/register',[AuthController::class, 'register'])->name('register')->middleware('AuthLogin');
+
+//     Route::post('/userRegister',[AuthController::class, 'registerAuth'])->name('userRegister')->middleware('AuthLogin');
+
+//     Route::get('/upload', [ExcelController::class, 'showUploadForm'])->name('upload.form');
+//     Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
+    
+// });
+
+// Route::group(['middleware'=>['AuthCheck']], function(){
+//     Route::get('/',[AuthController::class, 'home'])->name('home');
+// });
+
+// Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
+
+//route for excel upload
+
+
+Route::group(['middleware' => ['AuthLogin']], function () {
+    Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('AuthLogin');
+    Route::post('/userLogin', [AuthController::class, 'loginAuth'])->name('userLogin')->middleware('AuthLogin');
+    Route::get('/register', [AuthController::class, 'register'])->name('register')->middleware('AuthLogin');
+    Route::post('/userRegister', [AuthController::class, 'registerAuth'])->name('userRegister')->middleware('AuthLogin');
 });
+
+Route::group(['middleware' => ['AuthCheck']], function () {
+    Route::get('/', [AuthController::class, 'home'])->name('home');
+    Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
+});
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+
+// Route::get('/upload-excel', [ExcelController::class, 'showUploadForm'])->name('upload.form');
+// Route::post('/upload-excel', [ExcelController::class, 'uploadExcel'])->name('upload.excel');
+// Route::post('/store-excel', [ExcelController::class, 'storeExcelData'])->name('store.excel');
+// Route::get('/dashboard', [ExcelController::class, 'dashboard'])->name('dashboard');
+

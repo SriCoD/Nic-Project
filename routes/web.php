@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExcelController;
+use Illuminate\Support\Facades\DB;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +50,15 @@ Route::group(['middleware' => ['AuthCheck']], function () {
     Route::post('/upload', [ExcelController::class, 'uploadFile'])->name('upload.file');
 });
 
+Route::get('/test-db-connection', function () {
+    try {
+        DB::connection()->getPdo();
+        return 'Database connection established successfully!';
+    } catch (\Exception $e) {
+        return 'Database connection error: ' . $e->getMessage();
+    }
+});
+
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
@@ -56,4 +67,3 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 // Route::post('/upload-excel', [ExcelController::class, 'uploadExcel'])->name('upload.excel');
 // Route::post('/store-excel', [ExcelController::class, 'storeExcelData'])->name('store.excel');
 // Route::get('/dashboard', [ExcelController::class, 'dashboard'])->name('dashboard');
-

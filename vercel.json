@@ -1,0 +1,12 @@
+{
+    "builds": [
+        {
+            "src": "public/index.php",
+            "use": "@vercel/php",
+            "config": {
+                "maxLambdaSize": "50mb"
+            }
+        }
+    ],
+    "routes": [{ "src": "/(.*)", "dest": "public/index.php" }]
+}

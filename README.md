@@ -13,9 +13,25 @@ MyExcelApp is a web application designed to allow users to register, log in, upl
 6.	**Data Display**: The data from the uploaded Excel files is displayed on a user-friendly dashboard.
  <br></br>
 
-   
-**Technologies Used**
-•	Backend: Laravel 10 Framework
+   ![Screenshot 2024-06-16 153253](https://github.com/SriCoD/Nic-Project/assets/72248660/475ca9b7-6ec5-4cef-adfe-0a53f29e651a)
+
+   ![Screenshot 2024-06-16 153223](https://github.com/SriCoD/Nic-Project/assets/72248660/20f69466-5ca6-435c-aca3-1283aa89c3a2)
+![Screenshot 2024-06-16 151942](https://github.com/SriCoD/Nic-Project/assets/72248660/ae4bd8f3-4152-4f9a-8690-097a59a0ff7a)
+
+![Screenshot 2024-06-16 152451](https://github.com/SriCoD/Nic-Project/assets/72248660/7d14e477-1cec-4240-8c39-d4e16db8cc3d)
+
+![Screenshot 2024-06-16 153007](https://github.com/SriCoD/Nic-Project/assets/72248660/1864529e-ae29-4675-95ac-11e1cd446173)
+
+![Screenshot 2024-06-16 154203](https://github.com/SriCoD/Nic-Project/assets/72248660/f10dad2d-b00f-404f-8bc0-84c815207e03)
+
+![Screenshot 2024-06-16 154703](https://github.com/SriCoD/Nic-Project/assets/72248660/b3187fcb-0c78-4442-8b4a-577c9dfb933d)
+
+
+
+<br></br>
+**Technologies Used**!
+
+•	Backend: Laravel 10 Framework!
 •	Frontend: HTML, CSS (Bootstrap), JavaScript
 •	Database: PostgreSQL
 •	File Processing: Maatwebsite Excel package for Laravel

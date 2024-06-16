@@ -48,6 +48,27 @@
 // }
 
 
+// namespace App\Imports;
+
+// use App\Models\ExcelDataTable;
+// use Maatwebsite\Excel\Concerns\ToModel;
+
+// class ExcelImport implements ToModel
+// {
+//     public function model(array $row)
+//     {
+//         return new ExcelDataTable([
+//             'column1' => $row[0],
+//             'column2' => $row[1],
+//             'column3' => $row[2],
+//             'column4' => $row[3],
+//             'column5' => $row[4],
+//             'column6' => $row[5],
+//             'column7' => $row[6],
+//             'column8' => $row[7],
+//         ]);
+//     }
+// }
 namespace App\Imports;
 
 use App\Models\ExcelDataTable;
@@ -57,10 +78,20 @@ class ExcelImport implements ToModel
 {
     public function model(array $row)
     {
+        // Check if the required indices exist in the $row array
+        //  if (!isset($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7])) {
+        //   return null; // Skip this row if not all columns are present
+        //  }
+
         return new ExcelDataTable([
-            'column1' => $row[0]
-            //'column2' => $row[1]
-            // Map additional columns as needed
+            'column1' => $row[0],
+            'column2' => $row[1],
+            'column3' => $row[2],
+            'column4' => $row[3],
+             'column5' => $row[4],
+             'column6' => $row[5],
+             'column7' => $row[6],
+           // 'column8' => $row[7],
         ]);
     }
 }

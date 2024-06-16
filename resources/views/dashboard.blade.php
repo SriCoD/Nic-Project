@@ -105,7 +105,7 @@
                         <th>column9</th>
                         <th>column10</th>
                         <th>column11</th>
-                        
+                        <th>column12</th>
                     
                         
                     </tr>
@@ -124,7 +124,7 @@
                             <td>{{ $data->column9 }}</td>
                             <td>{{ $data->column10 }}</td>
                             <td>{{ $data->column11 }}</td>
-                           
+                            <td>{{ $data->column12 }}</td>
                             
                         </tr>
                     @endforeach

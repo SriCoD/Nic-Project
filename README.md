@@ -49,18 +49,13 @@ Prerequisites
  <br></br>
 
 **Steps to use this project**
-
-1.	Clone the Repository
-
+1.	Clone the Repository:
 git clone git@github.com:SriCoD/Nic-Project.git<br></br>
 cd MyExcelApp<br></br>
-
-2.	Install Dependencies
-
+2.	Install Dependencies:
 composer install<br></br>
 npm install<br></br>
 npm run dev<br></br>
-
 3.	Environment Configuration<br></br>
 Copy .env.example to .env
 <br></br>

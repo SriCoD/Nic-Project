@@ -53,21 +53,21 @@ Prerequisites
 1.	Clone the Repository
 bash
 Copy code
-git clone https://github.com/yourusername/MyExcelApp.git
-cd MyExcelApp
+git clone https://github.com/yourusername/MyExcelApp.git<br></br>
+cd MyExcelApp<br></br>
 
 2.	Install Dependencies
 bash
 Copy code
-composer install
-npm install
-npm run dev
+composer install<br></br>
+npm install<br></br>
+npm run dev<br></br>
 
 3.	Environment Configuration
 Copy .env.example to .env
 bash
 Copy code
-cp .env.example .env
+cp .env.example .env<br></br>
 Set up your database credentials in the .env file
 env <br></br>
 Copy code
@@ -81,12 +81,12 @@ DB_PASSWORD=your_database_password <br></br>
 4.	Generate Application Key
 bash
 Copy code
-php artisan key:generate
+php artisan key:generate<br></br>
 
 5.	Run Migrations
 bash
 Copy code
-php artisan migrate
+php artisan migrate<br></br>
 
 6.	Run the Application
 bash

@@ -51,26 +51,23 @@ Prerequisites
 **Steps to use this project**
 
 1.	Clone the Repository
-bash
-Copy code
+
 git clone https://github.com/yourusername/MyExcelApp.git<br></br>
 cd MyExcelApp<br></br>
 
 2.	Install Dependencies
-bash
-Copy code
+
 composer install<br></br>
 npm install<br></br>
 npm run dev<br></br>
 
-3.	Environment Configuration
+3.	Environment Configuration<br></br>
 Copy .env.example to .env
-bash
-Copy code
+<br></br>
 cp .env.example .env<br></br>
 Set up your database credentials in the .env file
 env <br></br>
-Copy code
+
 DB_CONNECTION=pgsql  <br></br>
 DB_HOST=127.0.0.1  <br></br>
 DB_PORT=5432 <br></br>
@@ -79,18 +76,15 @@ DB_USERNAME=your_database_username <br></br>
 DB_PASSWORD=your_database_password <br></br>
 <br></br>
 4.	Generate Application Key
-bash
-Copy code
+
 php artisan key:generate<br></br>
 
 5.	Run Migrations
-bash
-Copy code
+
 php artisan migrate<br></br>
 
 6.	Run the Application
-bash
-Copy code
+<br></br>
 **php artisan serve**
 
 The application will be accessible at http://127.0.0.1:8000.
@@ -133,11 +127,11 @@ _**Code Structure**_
  <br></br>
 
 Important Files
-•	.env: Environment variables configuration.
-•	routes/web.php: Web routes for the application.
-•	config/database.php: Database configuration.
-•	resources/views/: Directory containing all view files.
-•	app/Http/Controllers/: Directory containing all controller files.
+•	**.env**: Environment variables configuration.
+•	**routes/web.php**: Web routes for the application.
+•	**config/database.php**: Database configuration.
+•	**resources/views/**: Directory containing all view files.
+•	**app/Http/Controllers/**: Directory containing all controller files.
 
  <br></br>
 Dependencies

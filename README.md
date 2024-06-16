@@ -52,7 +52,7 @@ Prerequisites
 
 1.	Clone the Repository
 
-git clone https://github.com/yourusername/MyExcelApp.git<br></br>
+git clone git@github.com:SriCoD/Nic-Project.git<br></br>
 cd MyExcelApp<br></br>
 
 2.	Install Dependencies
@@ -75,20 +75,18 @@ DB_DATABASE=your_database_name <br></br>
 DB_USERNAME=your_database_username <br></br>
 DB_PASSWORD=your_database_password <br></br>
 <br></br>
-4.	Generate Application Key
 
+4.	Generate Application Key
 php artisan key:generate<br></br>
 
 5.	Run Migrations
-
 php artisan migrate<br></br>
 
 6.	Run the Application
-<br></br>
 **php artisan serve**
 
 The application will be accessible at http://127.0.0.1:8000.
- <br></br>
+<br></br>
 
 _**Usage**_
 

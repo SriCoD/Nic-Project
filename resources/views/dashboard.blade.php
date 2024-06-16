@@ -102,8 +102,12 @@
                         <th>column6</th>
                         <th>column7</th>
                         <th>column8</th>
+                        <th>column9</th>
+                        <th>column10</th>
+                        <th>column11</th>
+                        
                     
-                        <!-- Add more columns as needed -->
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -117,11 +121,11 @@
                             <td>{{ $data->column6 }}</td>
                             <td>{{ $data->column7 }}</td>
                             <td>{{ $data->column8 }}</td>
-                            <!-- <td>{{ $data->column9 }}</td>
+                            <td>{{ $data->column9 }}</td>
                             <td>{{ $data->column10 }}</td>
                             <td>{{ $data->column11 }}</td>
-                            <td>{{ $data->column12 }}</td> -->
-                            <!-- Add more columns as needed -->
+                           
+                            
                         </tr>
                     @endforeach
                 </tbody>

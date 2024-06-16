@@ -18,8 +18,10 @@ class CreateExcelDataTablesTable extends Migration
             $table->string('column6');
             $table->string('column7');
             $table->string('column8');
-           
-          
+            $table->string('column9');
+            $table->string('column10');
+            $table->string('column11');
+            $table->string('column12');
             $table->timestamps();
         });
     }

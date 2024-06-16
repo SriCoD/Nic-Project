@@ -88,10 +88,14 @@ class ExcelImport implements ToModel
             'column2' => $row[1],
             'column3' => $row[2],
             'column4' => $row[3],
-             'column5' => $row[4],
-             'column6' => $row[5],
-             'column7' => $row[6],
-           // 'column8' => $row[7],
+            'column5' => $row[4],
+            'column6' => $row[5],
+            'column7' => $row[6],
+            'column8' => $row[7],
+             'column9' => $row[8],
+             'column10' => $row[9],
+            // 'column11' => $row[10],
+            // 'column12' => $row[11],
         ]);
     }
 }

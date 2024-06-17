@@ -1,0 +1,9 @@
+[build]
+  command = "npm run production"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "12"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

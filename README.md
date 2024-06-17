@@ -75,7 +75,7 @@ DB_USERNAME=your_database_username <br></br>
 DB_PASSWORD=your_database_password <br></br>
 <br></br>
 
-4.	Generate Application Key
+4.	Generate Application Key<br></br>
 php artisan key:generate<br></br>
 
 5.	Run Migrations

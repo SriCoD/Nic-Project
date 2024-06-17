@@ -1,7 +1,7 @@
 ________________________________________
-**MyExcelApp**
 
-MyExcelApp is a web application designed to allow users to register, log in, upload Excel files, and display the uploaded data on the webpage. The application is devloped using Laravel 10 and PostgreSQL, and leverages the Maatwebsite Excel package for handling Excel file imports.
+
+This is a web application designed to allow users to register, log in, upload Excel files, and display the uploaded data on the webpage. The application is devloped using Laravel 10 and PostgreSQL, and leverages the Maatwebsite Excel package for handling Excel file imports.
  <br></br>
 
 **Features**
@@ -55,7 +55,7 @@ Prerequisites
 **Steps to use this project**
 1.	Clone the Repository:
 git clone git@github.com:SriCoD/Nic-Project.git<br></br>
-cd MyExcelApp<br></br>
+
 2.	Install Dependencies:
 composer install<br></br>
 npm install<br></br>

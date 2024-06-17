@@ -35,9 +35,9 @@ https://github.com/SriCoD/Nic-Project/assets/72248660/e9eae61f-192a-478f-819d-99
 <br></br>
 **Technologies Used**!
 
-•	Backend: Laravel 10 Framework!
-•	Frontend: HTML, CSS (Bootstrap), JavaScript
-•	Database: PostgreSQL
+•	Backend: Laravel 10 Framework!<br></br>
+•	Frontend: HTML, CSS (Bootstrap), JavaScript<br></br>
+•	Database: PostgreSQL<br></br>
 •	File Processing: Maatwebsite Excel package for Laravel
  <br></br>
 
@@ -45,9 +45,9 @@ https://github.com/SriCoD/Nic-Project/assets/72248660/e9eae61f-192a-478f-819d-99
 **Installation and Setup**
 
 Prerequisites
-•	PHP >= 8.0
-•	Composer
-•	PostgreSQL
+•	PHP >= 8.0<br></br>
+•	Composer<br></br>
+•	PostgreSQL<br></br>
 •	Node.js & npm (optional for running Laravel Mix)
 
  <br></br>
